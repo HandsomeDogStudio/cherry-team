@@ -318,4 +318,11 @@ class Cherry_Team_Widget extends WP_Widget {
 	}
 }
 
-add_action( 'widgets_init', create_function( '', 'register_widget("Cherry_Team_Widget");' ) );
+add_action( 'widgets_init', 'class_cherry_team_widget_register_widget' );
+
+/**
+ * Helper function to register the Cherry Team Widget.
+ */
+function class_cherry_team_widget_register_widget() {
+  register_widget("Cherry_Team_Widget");
+}
